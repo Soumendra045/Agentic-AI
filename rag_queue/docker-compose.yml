@@ -1,0 +1,12 @@
+services:
+  valkey:
+    image: valkey/valkey
+    ports:
+      - 6379:6379
+    networks:
+      - shared-net
+
+networks:
+  shared-net:
+    external: true
+    name: my-shared-network
